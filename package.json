@@ -12,7 +12,10 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "nuxt": "^2.13.0"
+    "aos": "^3.0.0-beta.6",
+    "nuxt": "^2.13.0",
+    "vue-backtotop": "^1.6.1",
+    "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
