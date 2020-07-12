@@ -28,15 +28,13 @@
         hidden: !showMenu
       }"
     >
-      <div
-        class="md:flex-grow text-base md:text-xl md:text-gray-300 text-right md:text-left"
-      >
+      <div class="md:flex-grow text-base md:text-xl text-right md:text-left">
         <a
           v-for="(menu, index) in menuLinks"
           :key="index"
           v-scroll-to="menu.link"
           href="#"
-          class="block mt-2 md:inline-block md:mt-0 md:mr-10 last:mr-0"
+          class="block mt-2 md:inline-block md:mt-0 md:mr-10 last:mr-0 md:text-gray-300"
           :class="menu.color"
           @click="showMenu = false"
         >
