@@ -1,21 +1,21 @@
 <template>
   <div id="works-in" class="flex flex-col justify-between min-h-screen">
     <page-title title="Works In" title-class="text-yellow-500" />
-    <div class="flex flex-1 items-center min-h-full">
-      <div class="w-3/4 flex flex-wrap justify-around mx-auto">
+    <div class="flex flex-grow items-center min-h-full">
+      <div class="w-3/5 md:w-4/5 flex flex-wrap justify-around mx-auto mb-20">
         <div
           v-for="(language, index) in languages"
           :key="language.name"
-          class="w-full md:w-1/3 text-2xl md:text-3xl font-semibold mb-5"
+          class="w-full md:w-1/3 text-lg md:text-3xl font-semibold mb-5 md:mb-10 flex justify-center"
           :class="language.color"
           data-aos="fade-up"
           data-aos-offset="200"
           :data-aos-delay="delayValue(index)"
         >
           <div
-            class="h-20 w-20 ml-10 work-item flex items-center rounded-lg dark:bg-gray-800 p-2 cursor-default transition-all duration-1000 ease-in-out transform hover:shadow-xl hover:m-0 hover:w-full hover:justify-center"
+            class="h-12 w-12 md:h-20 md:w-20 work-item flex items-center rounded-lg dark:bg-gray-800 p-2 cursor-default transition-all duration-1000 ease-in-out transform hover:shadow-xl hover:m-0 hover:w-3/4 hover:justify-center"
           >
-            <div class="ml-8 work-item-inner">
+            <div class="ml-4 md:ml-8 work-item-inner">
               {{ language.name }}
             </div>
           </div>
