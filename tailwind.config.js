@@ -8,12 +8,26 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        dark: { raw: '(prefers-color-scheme: dark)' },
+        dark: { raw: '(prefers-color-scheme: dark)' }
         // => @media (prefers-color-scheme: dark) { ... }
       },
-    },
+      transitionProperty: {
+        height: 'height',
+        width: 'width',
+        spacing: 'margin, padding'
+      },
+      transitionDuration: {
+        '0': '0ms',
+        '2000': '2000ms',
+      }
+    }
   },
-  variants: {},
+  variants: {
+    transitionProperty: ['responsive', 'hover', 'focus'],
+    margin: ['responsive', 'hover', 'focus', 'last'],
+    width: ['responsive', 'hover', 'focus'],
+    justifyContent: ['responsive', 'hover', 'focus'],
+  },
   plugins: [],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
