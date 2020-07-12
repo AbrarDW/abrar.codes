@@ -1,6 +1,10 @@
 <template>
   <div class="flex flex-col justify-between min-h-screen">
-    <the-header data-aos="fade-down" data-aos-delay="700" />
+    <the-header
+      data-aos="fade-down"
+      data-aos-delay="700"
+      data-aos-once="true"
+    />
     <div class="md:self-start sm:self-center md:mt-20" data-aos="fade-right">
       <div class="text-3xl md:text-6xl dark:text-purple-600 font-black">
         Hey, I‘m Abrar.
@@ -14,6 +18,7 @@
       class="md:self-end sm:self-center md:mb-20 mb-10"
       data-aos="fade-left"
       data-aos-offset="200"
+      data-aos-once="true"
       data-aos-delay="300"
     >
       <div class="max-w-sm overflow-hidden">

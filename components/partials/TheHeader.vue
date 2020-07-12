@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex items-center justify-between flex-wrap py-6">
+  <nav class="flex items-start justify-between flex-wrap py-6 h-40 md:h-auto">
     <div class="flex items-center flex-shrink-0 text-white mr-6">
       <span
         class="font-semibold text-xl md:text-2xl tracking-tight dark:text-blue-400"
