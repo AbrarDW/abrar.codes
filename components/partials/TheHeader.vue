@@ -29,14 +29,14 @@
       }"
     >
       <div
-        class="md:flex-grow text-sm md:text-xl dark:text-gray-300 text-right md:text-left"
+        class="md:flex-grow text-base md:text-xl md:text-gray-300 text-right md:text-left"
       >
         <a
           v-for="(menu, index) in menuLinks"
           :key="index"
           v-scroll-to="menu.link"
           href="#"
-          class="block mt-4 md:inline-block md:mt-0 md:mr-10 last:mr-0"
+          class="block mt-2 md:inline-block md:mt-0 md:mr-10 last:mr-0"
           :class="menu.color"
           @click="showMenu = false"
         >
@@ -56,12 +56,12 @@ export default {
         {
           name: 'Works In',
           link: '#works-in',
-          color: 'hover:text-yellow-400'
+          color: 'hover:text-yellow-400 text-yellow-400'
         },
         {
           name: 'About',
           link: '#about',
-          color: 'hover:text-pink-400'
+          color: 'hover:text-pink-400 text-pink-400'
         }
         // {
         //   name: 'Contact',
