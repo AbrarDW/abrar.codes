@@ -15,7 +15,7 @@
       </p>
     </div>
     <div
-      class="md:self-end sm:self-center md:mb-20 mb-10"
+      class="md:self-end sm:self-center mb-20"
       data-aos="fade-left"
       data-aos-offset="200"
       data-aos-once="true"
