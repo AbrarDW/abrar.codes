@@ -6,7 +6,7 @@
         class="w-full md:w-4/5 flex flex-wrap justify-around mx-auto mb-10 md:mb-20"
       >
         <div
-          class="w-full text-lg md:text-2xl font-semibold dark:text-gray-300 text-center md:text-left"
+          class="w-full text-lg md:text-2xl font-semibold text-gray-300 text-center md:text-left"
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="300"

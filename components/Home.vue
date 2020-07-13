@@ -6,10 +6,10 @@
       data-aos-once="true"
     />
     <div class="md:self-start sm:self-center md:mt-20" data-aos="fade-right">
-      <div class="text-3xl md:text-6xl dark:text-purple-600 font-black">
+      <div class="text-3xl md:text-6xl text-purple-600 font-black">
         Hey, I‘m Abrar.
       </div>
-      <p class="text-xl md:text-3xl mt-4 dark:text-gray-300 font-normal">
+      <p class="text-xl md:text-3xl mt-4 text-gray-300 font-normal">
         Web developer from Vadodara, India.
         <br />I create easy to use web applications and websites.
       </p>
