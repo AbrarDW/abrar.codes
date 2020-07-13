@@ -3,10 +3,11 @@
     <home />
     <works-in />
     <about />
-    <back-to-top bottom="50px" right="50px">
+    <contact />
+    <back-to-top bottom="40px" right="40px">
       <button
         type="button"
-        class="btn-to-top text-white rounded-full bg-gray-700"
+        class="btn-to-top text-blue-400 rounded-full bg-gray-800"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -27,12 +28,14 @@ import BackToTop from 'vue-backtotop'
 import Home from '~/components/Home'
 import WorksIn from '~/components/WorksIn'
 import About from '~/components/About'
+import Contact from '~/components/Contact'
 
 export default {
   components: {
     Home,
     WorksIn,
     About,
+    Contact,
     BackToTop
   }
 }
