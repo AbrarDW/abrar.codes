@@ -13,7 +13,7 @@
           :data-aos-delay="delayValue(index)"
         >
           <div
-            class="h-12 w-12 md:h-20 md:w-20 work-item flex items-center rounded-lg dark:bg-gray-800 p-2 cursor-default transition-all duration-1000 ease-in-out transform hover:shadow-xl hover:m-0 hover:w-3/4 hover:justify-center"
+            class="h-12 w-12 md:h-20 md:w-20 work-item flex items-center rounded-lg dark:bg-gray-800 p-2 cursor-default transition-all duration-500 ease-in-out transform hover:shadow-xl hover:m-0 hover:w-3/4 hover:justify-center"
           >
             <div class="ml-4 md:ml-8 work-item-inner">
               {{ language.name }}
@@ -44,15 +44,15 @@ export default {
           color: 'text-red-500'
         },
         {
+          name: 'Javascript',
+          color: 'text-yellow-500'
+        },
+        {
           name: 'Angular',
           color: 'text-red-500'
         },
         {
           name: 'Vue',
-          color: 'text-green-500'
-        },
-        {
-          name: 'Nuxt',
           color: 'text-green-500'
         }
       ]

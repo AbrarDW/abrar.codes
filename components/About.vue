@@ -24,7 +24,7 @@
           <br />
           I prefer to keep learning, continue challenging myself, and do
           interesting things that matter. I’m a fast learner, able to pick up
-          new skills and juggle
+          new skills and juggle.
         </div>
       </div>
     </div>
