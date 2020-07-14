@@ -8,14 +8,19 @@
           :key="language.name"
           class="w-full md:w-1/3 text-lg md:text-3xl font-semibold mb-5 md:mb-10 flex justify-center"
           :class="language.color"
-          data-aos="fade-up"
-          data-aos-offset="200"
-          :data-aos-delay="delayValue(index)"
         >
           <div
+            data-aos="fade-up"
+            data-aos-offset="10"
+            :data-aos-delay="delayValue(index)"
             class="h-12 w-12 md:h-20 md:w-20 work-item flex items-center rounded-lg bg-gray-800 p-2 cursor-default transition-all duration-500 ease-in-out transform hover:shadow-xl hover:m-0 hover:w-3/4 hover:justify-center"
           >
-            <div class="ml-4 md:ml-8 work-item-inner">
+            <div
+              class="ml-4 md:ml-8 work-item-inner"
+              data-aos="fade-left"
+              data-aos-offset="10"
+              :data-aos-delay="delayValue(index)"
+            >
               {{ language.name }}
             </div>
           </div>
