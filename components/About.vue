@@ -11,9 +11,11 @@
           data-aos-offset="200"
           data-aos-delay="300"
         >
-          Hi, I am Abrar Dhalwala based in Vadodara, India. I am a full-stack
-          web developer since August, 2015. Currently, I have a full-time
-          commitment at Aecor Digital.
+          Hi, I am <span class="text-blue-400">Abrar Dhalwala</span> based in
+          Vadodara, India. I am a
+          <span class="text-yellow-400">full-stack web developer</span> since
+          August, 2015. Currently, I have a full-time commitment at Aecor
+          Digital.
           <br />
           <br />
           My goal as a web professional has always been to create a more usable
