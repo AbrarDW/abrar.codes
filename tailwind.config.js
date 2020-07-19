@@ -19,7 +19,7 @@ module.exports = {
       colors: {
         php: '#8892bf',
         laravel: '#ff2d20',
-        angular: '#dd0031',
+        angular: '#f44336',
         javascript: '#f8dc3d',
         vue: '#4fc08d'
       }

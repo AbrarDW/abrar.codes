@@ -35,9 +35,9 @@
 }
 
 .work-item .work-item-inner {
-  pointer-events: none;
+  pointer-events: none !important;
   transition: opacity 1s, transform 1s, margin 1.5s !important;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out !important;
 }
 
 .work-item:hover .work-item-inner {
