@@ -1,5 +1,7 @@
 <template>
-  <nav class="flex items-start justify-between flex-wrap py-6 h-40 md:h-auto">
+  <nav
+    class="flex items-start justify-between flex-wrap h-20 md:h-auto mt-5 md:mt-10 mb-5"
+  >
     <div class="flex items-center flex-shrink-0 text-white mr-6">
       <span
         class="font-semibold text-xl md:text-2xl tracking-tight text-blue-400"
@@ -46,6 +48,8 @@
 </template>
 
 <script>
+import { WORKS_IN_PAGE_ID, ABOUT_PAGE_ID, CONNECT_PAGE_ID } from '~/constant'
+
 export default {
   data() {
     return {
@@ -53,17 +57,17 @@ export default {
       menuLinks: [
         {
           name: 'Works In',
-          link: '#works-in',
+          link: `#${WORKS_IN_PAGE_ID}`,
           color: 'hover:text-yellow-400 text-yellow-400'
         },
         {
           name: 'About',
-          link: '#about',
+          link: `#${ABOUT_PAGE_ID}`,
           color: 'hover:text-pink-400 text-pink-400'
         },
         {
           name: 'Connect',
-          link: '#connect',
+          link: `#${CONNECT_PAGE_ID}`,
           color: 'hover:text-green-400 text-green-400'
         }
       ]

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center" data-aos="fade-down">
+  <div class="flex justify-center" data-aos="fade-down" data-aos-delay="200">
     <div class="text-3xl md:text-6xl font-black mt-10 mb-5" :class="titleClass">
       {{ title }}
     </div>

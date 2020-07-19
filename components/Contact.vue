@@ -1,5 +1,5 @@
 <template>
-  <div id="connect" class="flex flex-col justify-between min-h-screen">
+  <div class="flex flex-col justify-between min-h-screen">
     <page-title title="Connect" title-class="text-green-500" />
     <div class="flex flex-grow items-center min-h-full">
       <div class="w-3/5 flex flex-wrap justify-around mx-auto mb-20">
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div
-      class="flex flex-grow-0 items-center justify-center text-gray-300 pb-20"
+      class="flex flex-grow-0 items-center justify-center text-gray-300 mb-10"
     >
       <div class="flex text-sm">
         <span data-aos="fade-up" data-aos-offset="1">Built with &nbsp;</span>

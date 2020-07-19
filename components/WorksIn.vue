@@ -1,8 +1,13 @@
 <template>
-  <div id="works-in" class="flex flex-col justify-between min-h-screen">
+  <div class="flex flex-col justify-between min-h-screen">
     <page-title title="Works In" title-class="text-yellow-500" />
     <div class="flex flex-grow items-center min-h-full">
-      <div class="w-3/5 md:w-4/5 flex flex-wrap justify-around mx-auto mb-20">
+      <div
+        class="w-3/5 md:w-4/5 flex flex-wrap justify-around mx-auto"
+        :class="{
+          'mb-20': nextId === ''
+        }"
+      >
         <div
           v-for="(language, index) in languages"
           :key="language.name"
@@ -28,15 +33,24 @@
         </div>
       </div>
     </div>
+    <next-button v-if="nextId" :to-id="nextId" />
   </div>
 </template>
 
 <script>
 import PageTitle from '~/components/partials/PageTitle'
+import NextButton from '~/components/partials/NextButton'
 
 export default {
   components: {
-    PageTitle
+    PageTitle,
+    NextButton
+  },
+  props: {
+    nextId: {
+      type: String,
+      default: ''
+    }
   },
   data() {
     return {
@@ -80,22 +94,4 @@ export default {
 }
 </script>
 
-<style scoped>
-/* Tailwind and AOS library property conflict resolve */
-.work-item {
-  transition: transform 1s ease 0.3s, opacity 1s ease 0.3s,
-    background-color 0.5s ease-in-out, color 0.5s ease-in-out,
-    box-shadow 0.5s ease-in-out, width 0.5s ease-in-out,
-    margin 0.5s ease-in-out 0.5s !important;
-}
-
-.work-item .work-item-inner {
-  pointer-events: none;
-  transition: opacity 1s, transform 1s, margin 1.5s !important;
-  transition-timing-function: ease-in-out;
-}
-
-.work-item:hover .work-item-inner {
-  margin-left: 0px;
-}
-</style>
+<style></style>
