@@ -43,28 +43,28 @@ export default {
       languages: [
         {
           name: 'PHP',
-          color: 'text-teal-500',
-          hoverColor: 'hover:bg-teal-500 hover:text-gray-800'
+          color: 'text-php',
+          hoverColor: 'hover:bg-php hover:text-gray-800'
         },
         {
           name: 'Laravel',
-          color: 'text-red-500',
-          hoverColor: 'hover:bg-red-500 hover:text-gray-800'
+          color: 'text-laravel',
+          hoverColor: 'hover:bg-laravel hover:text-gray-800'
         },
         {
           name: 'Javascript',
-          color: 'text-yellow-500',
-          hoverColor: 'hover:bg-yellow-500 hover:text-gray-800'
+          color: 'text-javascript',
+          hoverColor: 'hover:bg-javascript hover:text-gray-800'
         },
         {
           name: 'Angular',
-          color: 'text-red-500',
-          hoverColor: 'hover:bg-red-500 hover:text-gray-800'
+          color: 'text-angular',
+          hoverColor: 'hover:bg-angular hover:text-gray-800'
         },
         {
           name: 'Vue',
-          color: 'text-green-500',
-          hoverColor: 'hover:bg-green-500 hover:text-gray-800'
+          color: 'text-vue',
+          hoverColor: 'hover:bg-vue hover:text-gray-800'
         }
       ]
     }

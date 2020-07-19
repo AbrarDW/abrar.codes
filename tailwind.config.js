@@ -14,7 +14,14 @@ module.exports = {
       },
       transitionDuration: {
         '0': '0ms',
-        '2000': '2000ms',
+        '2000': '2000ms'
+      },
+      colors: {
+        php: '#8892bf',
+        laravel: '#ff2d20',
+        angular: '#dd0031',
+        javascript: '#f8dc3d',
+        vue: '#4fc08d'
       }
     }
   },
@@ -22,7 +29,7 @@ module.exports = {
     transitionProperty: ['responsive', 'hover', 'focus'],
     margin: ['responsive', 'hover', 'focus', 'last'],
     width: ['responsive', 'hover', 'focus'],
-    justifyContent: ['responsive', 'hover', 'focus'],
+    justifyContent: ['responsive', 'hover', 'focus']
   },
   plugins: [],
   purge: {
@@ -33,7 +40,7 @@ module.exports = {
       'layouts/**/*.vue',
       'pages/**/*.vue',
       'plugins/**/*.js',
-      'nuxt.config.js',
-    ],
-  },
+      'nuxt.config.js'
+    ]
+  }
 }
