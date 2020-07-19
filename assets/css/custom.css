@@ -1,0 +1,45 @@
+/* Custom Scroll bar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a202c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7f9cf5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f7fafc;
+}
+
+/* Bottom buttons - go to top and next */
+/* .to-btn {
+  width: 60px;
+  height: 60px;
+  padding: 15px 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 22px;
+} */
+
+/* Tailwind and AOS library property conflict resolve */
+.work-item {
+  transition: transform 1s ease 0.3s, opacity 1s ease 0.3s,
+    background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out, width 0.5s ease-in-out,
+    margin 0.5s ease-in-out 0.5s !important;
+}
+
+.work-item .work-item-inner {
+  pointer-events: none !important;
+  transition: opacity 1s, transform 1s, margin 1.5s !important;
+  transition-timing-function: ease-in-out !important;
+}
+
+.work-item:hover .work-item-inner {
+  margin-left: 0px;
+}

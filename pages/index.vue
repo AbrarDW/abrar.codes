@@ -1,13 +1,13 @@
 <template>
   <div class="container mx-auto px-8 xl:px-0">
-    <home />
-    <works-in />
-    <about />
-    <contact />
-    <back-to-top bottom="40px" right="40px">
+    <home :next-id="worksInId" />
+    <works-in :id="worksInId" :next-id="aboutId" />
+    <about :id="aboutId" :next-id="connectId" />
+    <contact :id="connectId" />
+    <back-to-top bottom="50px" right="40px">
       <button
         type="button"
-        class="btn-to-top text-blue-400 rounded-full bg-gray-800"
+        class="text-blue-400 rounded-full bg-gray-800 h-10 w-10 p-2 md:h-16 md:w-16 md:p-4"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +29,7 @@ import Home from '~/components/Home'
 import WorksIn from '~/components/WorksIn'
 import About from '~/components/About'
 import Contact from '~/components/Contact'
+import { WORKS_IN_PAGE_ID, ABOUT_PAGE_ID, CONNECT_PAGE_ID } from '~/constant'
 
 export default {
   components: {
@@ -37,17 +38,15 @@ export default {
     About,
     Contact,
     BackToTop
+  },
+  data() {
+    return {
+      worksInId: WORKS_IN_PAGE_ID,
+      aboutId: ABOUT_PAGE_ID,
+      connectId: CONNECT_PAGE_ID
+    }
   }
 }
 </script>
 
-<style>
-.btn-to-top {
-  width: 60px;
-  height: 60px;
-  padding: 10px 16px;
-  border-radius: 50%;
-  font-size: 22px;
-  line-height: 22px;
-}
-</style>
+<style></style>

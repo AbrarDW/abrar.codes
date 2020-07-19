@@ -1,12 +1,16 @@
 <template>
-  <div id="about" class="flex flex-col justify-between min-h-screen">
+  <div class="flex flex-col justify-between min-h-screen">
     <page-title title="About" title-class="text-pink-500" />
     <div class="flex flex-grow items-center min-h-full">
       <div
-        class="w-full md:w-4/5 flex flex-wrap justify-around mx-auto mb-10 md:mb-20"
+        class="w-full md:w-4/5 flex flex-wrap justify-around mx-auto"
+        :class="{
+          'md:mb-20': nextId === '',
+          'mb-10': nextId === ''
+        }"
       >
         <div
-          class="w-full text-lg md:text-2xl font-semibold text-gray-300 text-center md:text-left"
+          class="w-full text-base md:text-2xl font-semibold text-gray-300 text-center md:text-left"
           data-aos="fade-up"
           data-aos-offset="200"
           data-aos-delay="300"
@@ -30,15 +34,24 @@
         </div>
       </div>
     </div>
+    <next-button v-if="nextId" :to-id="nextId" />
   </div>
 </template>
 
 <script>
 import PageTitle from '~/components/partials/PageTitle'
+import NextButton from '~/components/partials/NextButton'
 
 export default {
   components: {
-    PageTitle
+    PageTitle,
+    NextButton
+  },
+  props: {
+    nextId: {
+      type: String,
+      default: ''
+    }
   }
 }
 </script>
