@@ -8,7 +8,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  // target: 'static',
+  target: 'static',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -52,7 +52,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['vue-scrollto/nuxt'],
+  modules: ['@nuxtjs/pwa', 'vue-scrollto/nuxt'],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
