@@ -21,7 +21,10 @@ module.exports = {
         laravel: '#ff2d20',
         angular: '#f44336',
         javascript: '#f8dc3d',
-        vue: '#4fc08d'
+        vue: '#4fc08d',
+        livewire: '#ed64a6',
+        nuxt: '#00c58e',
+        mysql: '#f29221'
       }
     }
   },

@@ -3,7 +3,7 @@
     <page-title title="Works In" title-class="text-yellow-500" />
     <div class="flex flex-grow items-center min-h-full">
       <div
-        class="w-3/5 md:w-4/5 flex flex-wrap justify-around mx-auto"
+        class="w-3/5 md:w-4/5 flex flex-wrap justify-evenly mx-auto"
         :class="{
           'mb-20': nextId === ''
         }"
@@ -66,6 +66,11 @@ export default {
           hoverColor: 'hover:bg-laravel hover:text-gray-800'
         },
         {
+          name: 'MySQL',
+          color: 'text-mysql',
+          hoverColor: 'hover:bg-mysql hover:text-gray-800'
+        },
+        {
           name: 'Javascript',
           color: 'text-javascript',
           hoverColor: 'hover:bg-javascript hover:text-gray-800'
@@ -79,6 +84,16 @@ export default {
           name: 'Vue',
           color: 'text-vue',
           hoverColor: 'hover:bg-vue hover:text-gray-800'
+        },
+        {
+          name: 'Nuxt',
+          color: 'text-nuxt',
+          hoverColor: 'hover:bg-nuxt hover:text-gray-800'
+        },
+        {
+          name: 'Livewire',
+          color: 'text-livewire',
+          hoverColor: 'hover:bg-livewire hover:text-gray-800'
         }
       ]
     }
