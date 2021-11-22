@@ -18,8 +18,7 @@
           Hi, I am <span class="text-blue-400">Abrar Dhalwala</span> based in
           Vadodara, India. I am a
           <span class="text-yellow-400">full-stack web developer</span> since
-          August, 2015. Currently, I have a full-time commitment at Aecor
-          Digital.
+          August, 2015.
           <br />
           <br />
           My goal as a web professional has always been to create a more usable

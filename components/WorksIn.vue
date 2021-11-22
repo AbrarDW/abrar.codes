@@ -84,16 +84,6 @@ export default {
           name: 'Vue',
           color: 'text-vue',
           hoverColor: 'hover:bg-vue hover:text-gray-800'
-        },
-        {
-          name: 'Nuxt',
-          color: 'text-nuxt',
-          hoverColor: 'hover:bg-nuxt hover:text-gray-800'
-        },
-        {
-          name: 'Livewire',
-          color: 'text-livewire',
-          hoverColor: 'hover:bg-livewire hover:text-gray-800'
         }
       ]
     }
