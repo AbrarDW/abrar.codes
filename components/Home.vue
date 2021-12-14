@@ -9,7 +9,7 @@
         Hey, I‘m Abrar.
       </div>
       <p class="text-lg md:text-3xl mt-4 text-gray-300 font-normal">
-        Web developer from Vadodara, India.
+        Full stack developer from Vadodara, India.
         <br />I create easy to use web applications and websites.
       </p>
     </div>
