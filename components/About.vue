@@ -15,8 +15,7 @@
           data-aos-offset="200"
           data-aos-delay="300"
         >
-          Hi, I am <span class="text-blue-400">Abrar Dhalwala</span> based in
-          Vadodara, India. I am a
+          Hi, I am <span class="text-blue-400">Abrar Dhalwala</span> from Vadodara, India based in Abu Dhabi, UAE. I am a
           <span class="text-yellow-400">full-stack web developer</span> since
           August, 2015.
           <br />

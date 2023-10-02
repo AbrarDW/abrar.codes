@@ -56,9 +56,14 @@ export default {
     return {
       languages: [
         {
-          name: 'PHP',
-          color: 'text-php',
-          hoverColor: 'hover:bg-php hover:text-gray-800'
+          name: 'NestJS',
+          color: 'text-nest',
+          hoverColor: 'hover:bg-nest hover:text-gray-800'
+        },
+        {
+          name: 'Vue',
+          color: 'text-vue',
+          hoverColor: 'hover:bg-vue hover:text-gray-800'
         },
         {
           name: 'Laravel',
@@ -66,25 +71,20 @@ export default {
           hoverColor: 'hover:bg-laravel hover:text-gray-800'
         },
         {
-          name: 'MySQL',
-          color: 'text-mysql',
-          hoverColor: 'hover:bg-mysql hover:text-gray-800'
-        },
-        {
-          name: 'Javascript',
-          color: 'text-javascript',
-          hoverColor: 'hover:bg-javascript hover:text-gray-800'
-        },
-        {
           name: 'Angular',
           color: 'text-angular',
           hoverColor: 'hover:bg-angular hover:text-gray-800'
         },
         {
-          name: 'Vue',
-          color: 'text-vue',
-          hoverColor: 'hover:bg-vue hover:text-gray-800'
-        }
+          name: 'MySQL',
+          color: 'text-mysql',
+          hoverColor: 'hover:bg-mysql hover:text-gray-800'
+        },
+        {
+          name: 'MongoDB',
+          color: 'text-mongo',
+          hoverColor: 'hover:bg-mongo hover:text-gray-800'
+        },
       ]
     }
   },
