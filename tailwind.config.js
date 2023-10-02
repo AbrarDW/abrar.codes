@@ -22,7 +22,9 @@ module.exports = {
         angular: '#f44336',
         javascript: '#f8dc3d',
         vue: '#4fc08d',
-        mysql: '#f29221'
+        mysql: '#f29221',
+        nest: '#ea2845',
+        mongo: '#00ed64'
       }
     }
   },
