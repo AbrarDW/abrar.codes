@@ -56,7 +56,7 @@ export default {
     return {
       languages: [
         {
-          name: 'Nest JS',
+          name: 'NestJS',
           color: 'text-nest',
           hoverColor: 'hover:bg-nest hover:text-gray-800'
         },
