@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import { WORKS_IN_PAGE_ID, ABOUT_PAGE_ID, CONNECT_PAGE_ID } from '~/constant'
+import { SKILLS_PAGE_ID, ABOUT_PAGE_ID, CONNECT_PAGE_ID } from '~/constant'
 
 export default {
   data() {
@@ -57,7 +57,7 @@ export default {
       menuLinks: [
         {
           name: 'Skills',
-          link: `#${WORKS_IN_PAGE_ID}`,
+          link: `#${SKILLS_PAGE_ID}`,
           color: 'hover:text-yellow-400 text-yellow-400'
         },
         {
