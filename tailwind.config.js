@@ -13,8 +13,8 @@ module.exports = {
         spacing: 'margin, padding'
       },
       transitionDuration: {
-        '0': '0ms',
-        '2000': '2000ms'
+        0: '0ms',
+        2000: '2000ms'
       },
       colors: {
         php: '#8892bf',
@@ -24,7 +24,16 @@ module.exports = {
         vue: '#4fc08d',
         mysql: '#f29221',
         nest: '#ea2845',
-        mongo: '#00ed64'
+        mongo: '#00ed64',
+        node: '#026e00',
+        ts: '#3178c6',
+        js: '#fcdc00',
+        nuxt: '#00dc82',
+        redis: '#a32422',
+        rmq: '#ff6600',
+        git: '#6e40c9',
+        jira: '#0052cc',
+        jest: '#15c213'
       }
     }
   },

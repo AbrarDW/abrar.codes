@@ -56,7 +56,7 @@ export default {
       showMenu: false,
       menuLinks: [
         {
-          name: 'Works In',
+          name: 'Skills',
           link: `#${WORKS_IN_PAGE_ID}`,
           color: 'hover:text-yellow-400 text-yellow-400'
         },
