@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div
+    <!-- <div
       class="flex flex-grow-0 items-center justify-center text-gray-300 mb-10"
     >
       <div class="flex text-sm">
@@ -35,7 +35,7 @@
           <TailwindLogo />
         </span>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -43,15 +43,15 @@
 import mail from '~/assets/svg/mail.svg?raw'
 import instagram from '~/assets/svg/instagram.svg?raw'
 import linkedin from '~/assets/svg/linkedin.svg?raw'
-import NuxtLogo from '~/assets/svg/nuxt.svg?inline'
-import TailwindLogo from '~/assets/svg/tailwind.svg?inline'
+// import NuxtLogo from '~/assets/svg/nuxt.svg?inline'
+// import TailwindLogo from '~/assets/svg/tailwind.svg?inline'
 import PageTitle from '~/components/partials/PageTitle'
 
 export default {
   components: {
-    PageTitle,
-    NuxtLogo,
-    TailwindLogo
+    PageTitle
+    // NuxtLogo,
+    // TailwindLogo
   },
   data() {
     return {

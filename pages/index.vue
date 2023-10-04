@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto px-8 xl:px-0">
-    <home :next-id="worksInId" />
-    <works-in :id="worksInId" :next-id="aboutId" />
+    <home :next-id="skillsId" />
+    <skills :id="skillsId" :next-id="aboutId" />
     <about :id="aboutId" :next-id="connectId" />
     <contact :id="connectId" />
     <back-to-top bottom="50px" right="40px">
@@ -26,22 +26,22 @@
 <script>
 import BackToTop from 'vue-backtotop'
 import Home from '~/components/Home'
-import WorksIn from '~/components/WorksIn'
+import Skills from '~/components/Skills'
 import About from '~/components/About'
 import Contact from '~/components/Contact'
-import { WORKS_IN_PAGE_ID, ABOUT_PAGE_ID, CONNECT_PAGE_ID } from '~/constant'
+import { SKILLS_PAGE_ID, ABOUT_PAGE_ID, CONNECT_PAGE_ID } from '~/constant'
 
 export default {
   components: {
     Home,
-    WorksIn,
+    Skills,
     About,
     Contact,
     BackToTop
   },
   data() {
     return {
-      worksInId: WORKS_IN_PAGE_ID,
+      skillsId: SKILLS_PAGE_ID,
       aboutId: ABOUT_PAGE_ID,
       connectId: CONNECT_PAGE_ID
     }
