@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col justify-between min-h-screen">
-    <page-title title="Works In" title-class="text-yellow-500" />
+    <page-title title="Skills" title-class="text-yellow-500" />
     <div class="flex flex-grow items-center min-h-full">
       <div
         class="w-3/5 md:w-4/5 flex flex-wrap justify-evenly mx-auto"
@@ -56,6 +56,21 @@ export default {
     return {
       languages: [
         {
+          name: 'NodeJS',
+          color: 'text-node',
+          hoverColor: 'hover:bg-node hover:text-gray-800'
+        },
+        {
+          name: 'TypeScript',
+          color: 'text-ts',
+          hoverColor: 'hover:bg-ts hover:text-gray-800'
+        },
+        {
+          name: 'JavaScript',
+          color: 'text-js',
+          hoverColor: 'hover:bg-js hover:text-gray-800'
+        },
+        {
           name: 'NestJS',
           color: 'text-nest',
           hoverColor: 'hover:bg-nest hover:text-gray-800'
@@ -66,14 +81,19 @@ export default {
           hoverColor: 'hover:bg-vue hover:text-gray-800'
         },
         {
-          name: 'Laravel',
-          color: 'text-laravel',
-          hoverColor: 'hover:bg-laravel hover:text-gray-800'
-        },
-        {
           name: 'Angular',
           color: 'text-angular',
           hoverColor: 'hover:bg-angular hover:text-gray-800'
+        },
+        {
+          name: 'PHP',
+          color: 'text-php',
+          hoverColor: 'hover:bg-php hover:text-gray-800'
+        },
+        {
+          name: 'Laravel',
+          color: 'text-laravel',
+          hoverColor: 'hover:bg-laravel hover:text-gray-800'
         },
         {
           name: 'MySQL',
@@ -85,6 +105,31 @@ export default {
           color: 'text-mongo',
           hoverColor: 'hover:bg-mongo hover:text-gray-800'
         },
+        {
+          name: 'Redis',
+          color: 'text-redis',
+          hoverColor: 'hover:bg-redis hover:text-gray-800'
+        },
+        {
+          name: 'RabbitMQ',
+          color: 'text-rmq',
+          hoverColor: 'hover:bg-rmq hover:text-gray-800'
+        },
+        {
+          name: 'Git',
+          color: 'text-git',
+          hoverColor: 'hover:bg-git hover:text-gray-800'
+        },
+        {
+          name: 'Jira',
+          color: 'text-jira',
+          hoverColor: 'hover:bg-jira hover:text-gray-800'
+        },
+        {
+          name: 'Jest',
+          color: 'text-jest',
+          hoverColor: 'hover:bg-jest hover:text-gray-800'
+        }
       ]
     }
   },
