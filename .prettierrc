@@ -1,8 +1,0 @@
-{
-  "trailingComma": "none",
-  "semi": false,
-  "singleQuote": true,
-  "editor.formatOnSave": true,
-  "endOfLine": "auto",
-  "arrowParens": "always"
-}
