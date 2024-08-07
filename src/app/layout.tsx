@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
-import { BGParticles } from "@/components/bg-particles";
+// import { BGParticles } from "@/components/bg-particles";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -63,7 +63,6 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <BGParticles />
           <TooltipProvider delayDuration={0}>
             {children}
             <Navbar />
