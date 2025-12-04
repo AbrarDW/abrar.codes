@@ -22,7 +22,7 @@ export default function Page() {
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFade delay={BLUR_FADE_DELAY}>
-                <AnimatedShinyText className="mx-0 text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none" >
+                <AnimatedShinyText className="mx-0 text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                   {`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
                 </AnimatedShinyText>
               </BlurFade>
@@ -48,6 +48,24 @@ export default function Page() {
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
             {DATA.summary}
+          </Markdown>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <h2 className="text-xl font-bold mt-5">What I enjoy doing?</h2>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <ul className="list-disc prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+            {DATA.whatIDo.map((item, i) => {
+              return <li key={i}>{item}</li>;
+            })}
+          </ul>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <h2 className="text-xl font-bold mt-5">Why I Code?</h2>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
+          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+            {DATA.whyIDo}
           </Markdown>
         </BlurFade>
       </section>
@@ -139,15 +157,16 @@ export default function Page() {
                 <Link
                   href={`mailto: ${DATA.contact.email}`}
                   className={cn(
-                    `z-50 inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text`,
-                  )}>
+                    `z-50 inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text`
+                  )}
+                >
                   <MailIcon className="size-4" />
                 </Link>
               </AnimatedGradientText>
             </div>
           </BlurFade>
         </div>
-      </section >
-    </main >
+      </section>
+    </main>
   );
 }

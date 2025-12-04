@@ -8,15 +8,23 @@ export const DATA = {
   location: "Abu Dhabi, UAE",
   locationLink: "https://www.google.com/maps/place/abudhabi",
   description:
-    "Software Engineer. I create easy to use Web Applications. Very active on Instagram and Threads.",
+    "Software Engineer. Building clean, scalable web applications that deliver real value.",
   summary:
-    "Having about 9 years of experience of working in software industry and highly skilled in various tech stacks. My goal is to create more usable and elegant products for the clients.",
+    "I’m a software engineer with over a decade of experience, passionate about turning smart ideas into elegant web applications. I’ve helped small startups and established teams bring their visions to life — always focusing on usability, performance, and clean code.",
+  whatIDo: [
+    "Crafting full-stack web applications — from backend services to interactive front-end experiences.",
+    "Working with modern tools and stacks: Node.js, TypeScript, JavaScript, PHP, Go, React/Vue, Next.js, MySQL, MongoDB, Redis, and more.",
+    "Collaborating closely with clients or teams to understand their needs, add value, and build solutions that feel intuitive and maintainable.",
+  ],
+  whyIDo:
+    "Because I believe good software should just work — fast, secure, and easy to use. I love solving real problems and watching ideas become products that people rely on. \n\nWant to build something together? Drop me a message — I’m always up for new challenges.",
   avatarUrl: "/me.jpg",
   skills: [
     "Typescript",
     "Node",
     "Javascript",
     "PHP",
+    "Python",
     "Go",
     "MySQL",
     "Mongo DB",
@@ -27,6 +35,17 @@ export const DATA = {
     "Laravel",
     "React",
     "NextJS",
+    "Iris",
+    "FastAPI",
+    "AWS S3",
+    "AWS Lambda",
+    "AWS EC2",
+    "Vercel",
+    "Jest",
+    "Jira",
+    "GitHub",
+    "GitLab",
+    "SonarQube",
   ],
   skillSlugs: [
     "typescript",
@@ -50,10 +69,13 @@ export const DATA = {
     "go",
     "redis",
     "rabbitmq",
+    "python",
+    "fastapi",
+    "mysql",
+    "mongodb",
+    "amazonaws",
   ],
-  navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-  ],
+  navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
     email: "abrardw2@gmail.com",
     tel: "+971562259033",
@@ -92,7 +114,7 @@ export const DATA = {
       title: "Senior Software Engineer",
       start: "Aug 2022",
       end: null,
-      description: ""
+      description: "",
     },
     {
       company: "Bacancy Technology",
@@ -101,7 +123,7 @@ export const DATA = {
       title: "Senior Software Engineer",
       start: "Jan 2022",
       end: "Jul 2022",
-      description: ""
+      description: "",
     },
     {
       company: "Aecor Digital",
@@ -110,7 +132,7 @@ export const DATA = {
       title: "Senior Software Engineer",
       start: "Mar 2020",
       end: "Dec 2021",
-      description: ""
+      description: "",
     },
     {
       company: "Netweb Software Pvt Ltd",
@@ -119,7 +141,7 @@ export const DATA = {
       title: "Software Engineer",
       start: "Feb 2017",
       end: "Mar 2020",
-      description: ""
+      description: "",
     },
     {
       company: "Pixel Perfection",
@@ -128,7 +150,7 @@ export const DATA = {
       title: "Software Engineer",
       start: "Aug 2015",
       end: "Aug 2016",
-      description: ""
+      description: "",
     },
   ],
   education: [
