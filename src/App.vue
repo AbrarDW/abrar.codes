@@ -28,7 +28,7 @@
         <p class="font-mono text-ink-muted mb-5"><span class="text-accent">$</span> whoami</p>
         <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tighter">Abrar Dhalwala</h1>
         <p class="mt-7 text-xl sm:text-2xl text-ink-soft leading-snug max-w-3xl">
-          Senior software engineer. 10+ years shipping full-stack web apps with Node, TypeScript, Go and Vue — fast, secure and easy to use.
+          Senior software engineer. 10+ years shipping full-stack web apps with Node, PHP, TypeScript, Go and Vue — fast, secure and easy to use.
         </p>
         <div class="flex flex-wrap gap-3 mt-12 font-mono text-sm">
           <a href="#contact" class="inline-flex items-center min-h-[48px] px-5 rounded-md bg-accent text-ink-950 font-semibold hover:brightness-110 transition">./get-in-touch</a>
