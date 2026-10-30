@@ -138,8 +138,8 @@ const experience = [
 ]
 
 const skillCategories = [
-  { key: 'languages', items: ['TypeScript', 'JavaScript', 'Node', 'PHP', 'Python', 'Go'] },
-  { key: 'frameworks', items: ['Vue', 'React', 'Next.js', 'NestJS', 'Laravel', 'FastAPI', 'Iris'] },
+  { key: 'languages', items: ['Node', 'PHP', 'Python', 'Go', 'TypeScript', 'JavaScript'] },
+  { key: 'frameworks', items: ['NestJS', 'Laravel', 'FastAPI', 'Iris', 'Vue', 'React', 'Next.js'] },
   { key: 'data', items: ['MySQL', 'MongoDB', 'Redis', 'RabbitMQ'] },
   { key: 'cloud', items: ['AWS S3', 'AWS Lambda', 'AWS EC2', 'Vercel'] },
   { key: 'quality', items: ['Jest', 'SonarQube', 'Jira', 'GitHub', 'GitLab'] },
