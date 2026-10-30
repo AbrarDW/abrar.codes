@@ -2,17 +2,17 @@
 
 https://abrar.vercel.app/
 
+Personal portfolio built with Vue 3, Vite and Tailwind CSS.
+
 ## Build Setup
 
 ```bash
 # install dependencies
-$ npm install
+npm install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# serve with hot reload at localhost:5173
+npm run dev
 
-# generate static project and deploy on static hosting
-$ npm run generate
+# build for production into dist/
+npm run build
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
