@@ -25,14 +25,8 @@
     <main class="max-w-6xl mx-auto px-4 sm:px-6">
       <!-- Hero -->
       <section class="pt-36 sm:pt-44 pb-24">
-        <div class="flex flex-col sm:flex-row sm:items-end gap-8">
-          <div class="flex-1">
-            <p class="font-mono text-ink-muted mb-5"><span class="text-accent">$</span> whoami</p>
-            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tighter">Abrar Dhalwala</h1>
-          </div>
-          <img src="/me.jpg" alt="Abrar Dhalwala" width="480" height="480"
-               class="order-first sm:order-last w-24 h-24 sm:w-36 sm:h-36 lg:w-44 lg:h-44 rounded-2xl object-cover border border-ink-border">
-        </div>
+        <p class="font-mono text-ink-muted mb-5"><span class="text-accent">$</span> whoami</p>
+        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tighter">Abrar Dhalwala</h1>
         <p class="mt-7 text-xl sm:text-2xl text-ink-soft leading-snug max-w-3xl">
           Senior software engineer. 10+ years shipping full-stack web apps with Node, PHP, TypeScript, Go and Vue — fast, secure and easy to use.
         </p>
@@ -111,10 +105,6 @@
           <a href="https://www.linkedin.com/in/abrardw/" target="_blank" rel="noopener"
              class="inline-flex items-center min-h-[48px] px-5 rounded-md border border-ink-border font-mono text-sm hover:border-accent hover:text-accent transition-colors">
             linkedin
-          </a>
-          <a href="https://www.threads.net/@abrar.codes" target="_blank" rel="noopener"
-             class="inline-flex items-center min-h-[48px] px-5 rounded-md border border-ink-border font-mono text-sm hover:border-accent hover:text-accent transition-colors">
-            threads
           </a>
           <a href="https://www.instagram.com/abrar.codes" target="_blank" rel="noopener"
              class="inline-flex items-center gap-2 min-h-[48px] px-5 rounded-md bg-accent text-ink-950 font-mono text-sm font-semibold hover:brightness-110 transition">
