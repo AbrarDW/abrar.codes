@@ -28,7 +28,7 @@
         <p class="font-mono text-ink-muted mb-5"><span class="text-accent">$</span> whoami</p>
         <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tighter">Abrar Dhalwala</h1>
         <p class="mt-7 text-xl sm:text-2xl text-ink-soft leading-snug max-w-3xl">
-          Senior software engineer. 10+ years shipping full-stack web apps with Node, PHP, TypeScript, Go and Vue — fast, secure and easy to use.
+          Senior software engineer. 10+ years shipping full-stack web apps with Node, PHP, Python, Vue and TypeScript — fast, secure and easy to use.
         </p>
         <div class="flex flex-wrap gap-3 mt-12 font-mono text-sm">
           <a href="#contact" class="inline-flex items-center min-h-[48px] px-5 rounded-md bg-accent text-ink-950 font-semibold hover:brightness-110 transition">./get-in-touch</a>
@@ -37,6 +37,7 @@
         <div class="flex flex-wrap gap-3 mt-16 font-mono text-xs sm:text-sm">
           <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">status: <span class="text-accent">open to opportunities</span></span>
           <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">now: <span class="text-ink-text">{{ experience[0].company }}</span></span>
+          <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">location: <span class="text-ink-text">Abu Dhabi, UAE</span></span>
           <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">since: <span class="text-ink-text">2015</span></span>
         </div>
       </section>
@@ -49,8 +50,11 @@
               class="flex flex-wrap items-center gap-x-6 gap-y-2 px-5 sm:px-7 py-6 border-b border-ink-line last:border-b-0 hover:bg-white/[0.02] transition-colors">
             <span :class="i === 0 ? 'bg-accent' : 'border-2 border-ink-muted'" class="w-3 h-3 rounded-full shrink-0"></span>
             <span class="font-mono text-sm text-ink-muted w-44">{{ job.period }}</span>
-            <span class="w-full sm:w-72 text-xl sm:text-2xl font-semibold">{{ job.company }}</span>
-            <span class="flex-1 text-ink-soft">{{ job.role }}</span>
+            <span class="w-full lg:w-80 text-xl sm:text-2xl font-semibold">{{ job.company }}</span>
+            <span class="flex-1">
+              <span class="block text-ink-soft">{{ job.role }}</span>
+              <span class="block font-mono text-xs text-ink-muted mt-1">{{ job.location }}</span>
+            </span>
             <span v-if="i === 0" class="font-mono text-xs px-2 py-1 rounded border border-accent text-accent">HEAD → main</span>
             <span v-else-if="i === experience.length - 1" class="font-mono text-xs text-ink-muted">initial commit</span>
           </li>
@@ -69,9 +73,14 @@
       <section id="about" class="py-16 scroll-mt-20">
         <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> cat about.md</p>
         <div class="grid lg:grid-cols-5 gap-10">
-          <p class="lg:col-span-3 text-2xl sm:text-3xl leading-snug tracking-tight">
-            I turn smart ideas into elegant web applications — for small startups and established teams — with an eye on usability, performance and clean code.
-          </p>
+          <div class="lg:col-span-3 space-y-6">
+            <p class="text-2xl sm:text-3xl leading-snug tracking-tight">
+              I turn smart ideas into elegant web applications — for small startups and established teams — with an eye on usability, performance and clean code.
+            </p>
+            <p class="text-lg text-ink-soft leading-relaxed">
+              I love solving real problems and watching ideas become products that people rely on.
+            </p>
+          </div>
           <ul class="lg:col-span-2 space-y-4 text-ink-soft leading-relaxed">
             <li v-for="point in aboutPoints" :key="point" class="flex gap-3">
               <span class="font-mono text-accent">→</span>{{ point }}
@@ -86,7 +95,7 @@
         <div class="rounded-2xl border border-ink-border bg-ink-900 p-8 sm:p-14 flex flex-wrap items-end justify-between gap-8">
           <div class="flex-[1_1_420px]">
             <h2 class="text-4xl sm:text-6xl font-bold leading-none tracking-tight mb-4">Let’s build something.</h2>
-            <p class="text-ink-soft text-lg leading-relaxed max-w-xl">Send a direct question by email or DM and I’ll reply when I can. No soliciting, please.</p>
+            <p class="text-ink-soft text-lg leading-relaxed max-w-xl">Want to work together? I’m always up for new challenges. Send a direct question by email or DM and I’ll reply when I can. No soliciting, please.</p>
           </div>
           <div class="flex flex-wrap gap-3">
           <a href="mailto:abrardw2@gmail.com"
@@ -111,7 +120,7 @@
     <footer class="border-t border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-ink-muted">
         <p>&copy; {{ new Date().getFullYear() }} Abrar Dhalwala</p>
-        <p>exit 0 — built with Vue + Tailwind</p>
+        <p>exit 0 — built with Vue + Vite + Tailwind</p>
       </div>
     </footer>
   </div>
@@ -130,11 +139,11 @@ const navLinks = [
 ]
 
 const experience = [
-  { company: 'MyWhoosh', role: 'Senior Software Engineer', period: 'Aug 2022 → now' },
-  { company: 'Bacancy Technology', role: 'Senior Software Engineer', period: 'Jan 2022 → Jul 2022' },
-  { company: 'Aecor Digital', role: 'Senior Software Engineer', period: 'Mar 2020 → Dec 2021' },
-  { company: 'Netweb Software', role: 'Software Engineer', period: 'Feb 2017 → Mar 2020' },
-  { company: 'Pixel Perfection', role: 'Software Engineer', period: 'Aug 2015 → Aug 2016' },
+  { company: 'MyWhoosh', role: 'Senior Software Engineer', location: 'Abu Dhabi, UAE', period: 'Aug 2022 → now' },
+  { company: 'Bacancy Technology', role: 'Senior Software Engineer', location: 'Remote', period: 'Jan 2022 → Jul 2022' },
+  { company: 'Aecor Digital', role: 'Senior Software Engineer', location: 'Vadodara, India', period: 'Mar 2020 → Dec 2021' },
+  { company: 'Netweb Software Pvt Ltd', role: 'Software Engineer', location: 'Vadodara, India', period: 'Feb 2017 → Mar 2020' },
+  { company: 'Pixel Perfection', role: 'Software Engineer', location: 'Vadodara, India', period: 'Aug 2015 → Aug 2016' },
 ]
 
 const skillCategories = [
@@ -143,15 +152,15 @@ const skillCategories = [
   { key: 'data', items: ['MySQL', 'MongoDB', 'Redis'] },
   { key: 'realtime', items: ['WebSocket', 'RabbitMQ'] },
   { key: 'cloud', items: ['AWS S3', 'AWS Lambda', 'AWS EC2', 'Vercel'] },
-  { key: 'quality', items: ['Jest', 'SonarQube', 'Jira', 'GitHub', 'GitLab'] },
+  { key: 'tools', items: ['Jest', 'SonarQube', 'Jira', 'GitHub', 'GitLab'] },
 ]
 
 // Pads keys so the arrays in stack.json line up
 const keyWidth = Math.max(...skillCategories.map(c => c.key.length)) + 1
 
 const aboutPoints = [
-  'Full-stack apps, from backend services to interactive front-ends.',
+  'Full-stack apps, from backend services to interactive frontends.',
   'Close collaboration with clients and teams to build solutions that stay intuitive and maintainable.',
-  'Diploma in Computer Engineering, M S University, Vadodara (2010–2014).',
+  'Diploma in Computer Engineering, M.S. University, Vadodara (2010–2014).',
 ]
 </script>
