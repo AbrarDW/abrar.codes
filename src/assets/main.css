@@ -1,6 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-ink-900: #0f141b;
+  --color-ink-950: #0b0e13;
+  --color-ink-line: #21262d;
+  --color-ink-border: #30363d;
+  --color-ink-muted: #8b949e;
+  --color-ink-soft: #c9d1d9;
+  --color-ink-text: #e6edf3;
+
+  --color-accent: #c3f53c;
+
+  --color-syntax-key: #79c0ff;
+  --color-syntax-string: #a5d6ff;
+
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Tailwind v4 dropped the pointer cursor on buttons; keep v3's behaviour */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 html {
   scroll-behavior: smooth;
