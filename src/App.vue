@@ -26,8 +26,8 @@
       <!-- Hero -->
       <section class="pt-36 sm:pt-44 pb-24">
         <p class="font-mono text-ink-muted mb-5"><span class="text-accent">$</span> whoami</p>
-        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tighter">Abrar Dhalwala</h1>
-        <p class="mt-7 text-xl sm:text-2xl text-ink-soft leading-snug max-w-3xl">
+        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] sm:leading-none tracking-tighter">Abrar Dhalwala</h1>
+        <p class="mt-7 text-xl sm:text-2xl text-ink-soft leading-snug sm:leading-8 max-w-3xl">
           Senior software engineer. 10+ years shipping full-stack web apps with Node, PHP, Python, Vue and TypeScript — fast, secure and easy to use.
         </p>
         <div class="flex flex-wrap gap-3 mt-12 font-mono text-sm">
@@ -47,7 +47,7 @@
         <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> git log --career --oneline</p>
         <ol class="rounded-xl border border-ink-border bg-ink-900 overflow-hidden">
           <li v-for="(job, i) in experience" :key="job.company"
-              class="flex flex-wrap items-center gap-x-6 gap-y-2 px-5 sm:px-7 py-6 border-b border-ink-line last:border-b-0 hover:bg-white/[0.02] transition-colors">
+              class="flex flex-wrap items-center gap-x-6 gap-y-2 px-5 sm:px-7 py-6 border-b border-ink-line last:border-b-0 hover:bg-white/2 transition-colors">
             <span :class="i === 0 ? 'bg-accent' : 'border-2 border-ink-muted'" class="w-3 h-3 rounded-full shrink-0"></span>
             <span class="font-mono text-sm text-ink-muted w-44">{{ job.period }}</span>
             <span class="w-full lg:w-80 text-xl sm:text-2xl font-semibold">{{ job.company }}</span>
@@ -55,7 +55,7 @@
               <span class="block text-ink-soft">{{ job.role }}</span>
               <span class="block font-mono text-xs text-ink-muted mt-1">{{ job.location }}</span>
             </span>
-            <span v-if="i === 0" class="font-mono text-xs px-2 py-1 rounded border border-accent text-accent">HEAD → main</span>
+            <span v-if="i === 0" class="font-mono text-xs px-2 py-1 rounded-sm border border-accent text-accent">HEAD → main</span>
             <span v-else-if="i === experience.length - 1" class="font-mono text-xs text-ink-muted">initial commit</span>
           </li>
         </ol>
@@ -74,7 +74,7 @@
         <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> cat about.md</p>
         <div class="grid lg:grid-cols-5 gap-10">
           <div class="lg:col-span-3 space-y-6">
-            <p class="text-2xl sm:text-3xl leading-snug tracking-tight">
+            <p class="text-2xl sm:text-3xl leading-snug sm:leading-9 tracking-tight">
               I turn smart ideas into elegant web applications — for small startups and established teams — with an eye on usability, performance and clean code.
             </p>
             <p class="text-lg text-ink-soft leading-relaxed">
