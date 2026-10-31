@@ -24,22 +24,34 @@
 
     <main class="max-w-6xl mx-auto px-4 sm:px-6">
       <!-- Hero -->
-      <section class="pt-36 sm:pt-44 pb-24">
-        <p class="font-mono text-ink-muted mb-5"><span class="text-accent">$</span> whoami</p>
-        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] sm:leading-none tracking-tighter">Abrar Dhalwala</h1>
-        <p class="mt-7 text-xl sm:text-2xl text-ink-soft leading-snug sm:leading-8 max-w-3xl">
-          Senior software engineer. 10+ years shipping full-stack web apps with Node, PHP, Python, Vue and TypeScript — fast, secure and easy to use.
-        </p>
-        <div class="flex flex-wrap gap-3 mt-12 font-mono text-sm">
-          <a href="#contact" class="inline-flex items-center min-h-[48px] px-5 rounded-md bg-accent text-ink-950 font-semibold hover:brightness-110 transition">./get-in-touch</a>
-          <a href="#experience" class="inline-flex items-center min-h-[48px] px-5 rounded-md border border-ink-border hover:border-accent hover:text-accent transition-colors">git log --career</a>
+      <section class="pt-36 sm:pt-44 pb-24 grid xl:grid-cols-[minmax(0,1fr)_26rem] gap-16 xl:gap-12 items-center">
+        <div>
+          <p class="font-mono text-ink-muted mb-5"><span class="text-accent">$</span> whoami</p>
+          <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] sm:leading-none tracking-tighter">Abrar Dhalwala</h1>
+          <p class="mt-7 text-xl sm:text-2xl text-ink-soft leading-snug sm:leading-8 max-w-3xl">
+            Senior software engineer. 10+ years shipping full-stack web apps with Node, PHP, Python, Vue and TypeScript — fast, secure and easy to use.
+          </p>
+          <div class="flex flex-wrap gap-3 mt-12 font-mono text-sm">
+            <a href="#contact" class="inline-flex items-center min-h-[48px] px-5 rounded-md bg-accent text-ink-950 font-semibold hover:brightness-110 transition">./get-in-touch</a>
+            <a href="#experience" class="inline-flex items-center min-h-[48px] px-5 rounded-md border border-ink-border hover:border-accent hover:text-accent transition-colors">git log --career</a>
+          </div>
+          <div class="flex flex-wrap gap-3 mt-16 font-mono text-xs sm:text-sm">
+            <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">status: <span class="text-accent">open to opportunities</span></span>
+            <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">now: <span class="text-ink-text">{{ experience[0].company }}</span></span>
+            <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">location: <span class="text-ink-text">Abu Dhabi, UAE</span></span>
+            <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">since: <span class="text-ink-text">2015</span></span>
+          </div>
         </div>
-        <div class="flex flex-wrap gap-3 mt-16 font-mono text-xs sm:text-sm">
-          <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">status: <span class="text-accent">open to opportunities</span></span>
-          <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">now: <span class="text-ink-text">{{ experience[0].company }}</span></span>
-          <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">location: <span class="text-ink-text">Abu Dhabi, UAE</span></span>
-          <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">since: <span class="text-ink-text">2015</span></span>
-        </div>
+
+        <!-- ASCII portrait; font size scales with the container so all 150 columns always fit -->
+        <figure class="@container w-full max-w-md xl:max-w-none" role="img" aria-label="ASCII art portrait of Abrar Dhalwala">
+          <pre aria-hidden="true" class="font-mono text-[calc(100cqw/90)] leading-none text-ink-soft overflow-hidden select-none">{{ portrait }}</pre>
+          <figcaption class="mt-4 pt-3 border-t border-ink-line flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-xs text-ink-muted">
+            <span class="flex items-center gap-2"><span class="w-2 h-2 bg-ink-muted"></span>abrar.txt</span>
+            <span>{{ portraitCols }} × {{ portraitRows }}</span>
+            <span>{{ portraitChars.toLocaleString('en-US') }} characters</span>
+          </figcaption>
+        </figure>
       </section>
 
       <!-- Experience -->
@@ -128,6 +140,12 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import portrait from './assets/abrar.txt?raw'
+
+const portraitLines = portrait.split('\n')
+const portraitCols = Math.max(...portraitLines.map(l => l.length))
+const portraitRows = portraitLines.length
+const portraitChars = portrait.replace(/\s/g, '').length
 
 const menuOpen = ref(false)
 const menuButton = ref(null)
