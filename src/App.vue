@@ -24,27 +24,40 @@
 
     <main class="max-w-6xl mx-auto px-4 sm:px-6">
       <!-- Hero -->
-      <section class="pt-36 sm:pt-44 pb-24">
-        <p class="font-mono text-ink-muted mb-5"><span class="text-accent">$</span> whoami</p>
-        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] sm:leading-none tracking-tighter">Abrar Dhalwala</h1>
-        <p class="mt-7 text-xl sm:text-2xl text-ink-soft leading-snug sm:leading-8 max-w-3xl">
-          Senior software engineer. 10+ years shipping full-stack web apps with Node, PHP, Python, Vue and TypeScript — fast, secure and easy to use.
-        </p>
-        <div class="flex flex-wrap gap-3 mt-12 font-mono text-sm">
-          <a href="#contact" class="inline-flex items-center min-h-[48px] px-5 rounded-md bg-accent text-ink-950 font-semibold hover:brightness-110 transition">./get-in-touch</a>
-          <a href="#experience" class="inline-flex items-center min-h-[48px] px-5 rounded-md border border-ink-border hover:border-accent hover:text-accent transition-colors">git log --career</a>
+      <section class="pt-36 sm:pt-44 pb-24 grid xl:grid-cols-[minmax(0,1fr)_26rem] gap-16 xl:gap-12 items-center">
+        <div>
+          <p class="font-mono text-ink-muted mb-5"><span class="text-accent">$</span> <span v-scramble.load>whoami</span></p>
+          <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] sm:leading-none tracking-tighter" v-scramble.load>Abrar Dhalwala</h1>
+          <p class="mt-7 text-xl sm:text-2xl text-ink-soft leading-snug sm:leading-8 max-w-3xl">
+            Senior software engineer. 10+ years shipping full-stack web apps with Node, PHP, Python, Vue and TypeScript — fast, secure and easy to use.
+          </p>
+          <div class="flex flex-wrap gap-3 mt-12 font-mono text-sm">
+            <a href="#contact" class="inline-flex items-center min-h-[48px] px-5 rounded-md bg-accent text-ink-950 font-semibold hover:brightness-110 transition">./get-in-touch</a>
+            <a href="#experience" class="inline-flex items-center min-h-[48px] px-5 rounded-md border border-ink-border hover:border-accent hover:text-accent transition-colors">git log --career</a>
+          </div>
+          <div class="flex flex-wrap gap-3 mt-16 font-mono text-xs sm:text-sm">
+            <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">status: <span class="text-accent">open to opportunities</span></span>
+            <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">now: <span class="text-ink-text">{{ experience[0].company }}</span></span>
+            <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">location: <span class="text-ink-text">Abu Dhabi, UAE</span></span>
+            <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">since: <span class="text-ink-text">2015</span></span>
+          </div>
         </div>
-        <div class="flex flex-wrap gap-3 mt-16 font-mono text-xs sm:text-sm">
-          <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">status: <span class="text-accent">open to opportunities</span></span>
-          <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">now: <span class="text-ink-text">{{ experience[0].company }}</span></span>
-          <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">location: <span class="text-ink-text">Abu Dhabi, UAE</span></span>
-          <span class="px-3 py-2 rounded-md border border-ink-border text-ink-muted">since: <span class="text-ink-text">2015</span></span>
-        </div>
+
+        <!-- ASCII portrait; font size scales with the container so all 150 columns always fit -->
+        <figure class="@container w-full max-w-md xl:max-w-none" role="img" aria-label="ASCII art portrait of Abrar Dhalwala">
+          <pre ref="portraitEl" aria-hidden="true" class="font-mono text-[calc(100cqw/90)] leading-none text-ink-soft overflow-hidden select-none">{{ portrait }}</pre>
+          <figcaption class="mt-4 pt-3 border-t border-ink-line flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-xs text-ink-muted">
+            <span class="flex items-center gap-2"><span class="w-2 h-2 bg-ink-muted"></span>abrar.txt</span>
+            <span>{{ portraitCols }} × {{ portraitRows }}</span>
+            <span>{{ portraitChars.toLocaleString('en-US') }} characters</span>
+            <button v-if="canAnimate" type="button" @click="playPortrait" class="ml-auto hover:text-accent transition-colors">↻ replay</button>
+          </figcaption>
+        </figure>
       </section>
 
       <!-- Experience -->
       <section id="experience" class="py-16 scroll-mt-20">
-        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> git log --career --oneline</p>
+        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> <span v-scramble>git log --career --oneline</span></p>
         <ol class="rounded-xl border border-ink-border bg-ink-900 overflow-hidden">
           <li v-for="(job, i) in experience" :key="job.company"
               class="flex flex-wrap items-center gap-x-6 gap-y-2 px-5 sm:px-7 py-6 border-b border-ink-line last:border-b-0 hover:bg-white/2 transition-colors">
@@ -63,7 +76,7 @@
 
       <!-- Skills -->
       <section id="skills" class="py-16 scroll-mt-20">
-        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> cat stack.json</p>
+        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> <span v-scramble>cat stack.json</span></p>
         <pre class="p-6 sm:p-8 rounded-xl border border-ink-border bg-ink-900 font-mono text-sm sm:text-[15px] leading-loose text-ink-soft overflow-x-auto">{<template v-for="(category, i) in skillCategories" :key="category.key">
   <span class="text-syntax-key">"{{ category.key }}"</span>:{{ ' '.repeat(keyWidth - category.key.length) }}[<template v-for="(skill, j) in category.items" :key="skill"><span class="text-syntax-string">"{{ skill }}"</span><template v-if="j < category.items.length - 1">, </template></template>]<template v-if="i < skillCategories.length - 1">,</template></template>
 }</pre>
@@ -71,7 +84,7 @@
 
       <!-- About -->
       <section id="about" class="py-16 scroll-mt-20">
-        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> cat about.md</p>
+        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> <span v-scramble>cat about.md</span></p>
         <div class="grid lg:grid-cols-5 gap-10">
           <div class="lg:col-span-3 space-y-6">
             <p class="text-2xl sm:text-3xl leading-snug sm:leading-9 tracking-tight">
@@ -91,10 +104,10 @@
 
       <!-- Contact -->
       <section id="contact" class="py-16 pb-24 scroll-mt-20">
-        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> ping abrar</p>
+        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> <span v-scramble>ping abrar</span></p>
         <div class="rounded-2xl border border-ink-border bg-ink-900 p-8 sm:p-14 flex flex-wrap items-end justify-between gap-8">
           <div class="flex-[1_1_420px]">
-            <h2 class="text-4xl sm:text-6xl font-bold leading-none tracking-tight mb-4">Let’s build something.</h2>
+            <h2 class="text-4xl sm:text-6xl font-bold leading-none tracking-tight mb-4" v-scramble>Let’s build something.</h2>
             <p class="text-ink-soft text-lg leading-relaxed max-w-xl">Want to work together? I’m always up for new challenges. Send a direct question by email or DM and I’ll reply when I can. No soliciting, please.</p>
           </div>
           <div class="flex flex-wrap gap-3">
@@ -128,6 +141,28 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import portrait from './assets/abrar.txt?raw'
+import { vScramble, revealAscii, prefersReducedMotion } from './effects'
+
+const portraitLines = portrait.split('\n')
+const portraitCols = Math.max(...portraitLines.map(l => l.length))
+const portraitRows = portraitLines.length
+const portraitChars = portrait.replace(/\s/g, '').length
+
+const portraitEl = ref(null)
+const canAnimate = ref(false)
+let stopPortrait
+
+function playPortrait() {
+  stopPortrait?.()
+  stopPortrait = revealAscii(portraitEl.value, portrait)
+}
+
+onMounted(() => {
+  canAnimate.value = !prefersReducedMotion()
+  if (canAnimate.value) playPortrait()
+})
+onBeforeUnmount(() => stopPortrait?.())
 
 const menuOpen = ref(false)
 const menuButton = ref(null)
