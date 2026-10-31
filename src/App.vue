@@ -50,7 +50,7 @@
               class="flex flex-wrap items-center gap-x-6 gap-y-2 px-5 sm:px-7 py-6 border-b border-ink-line last:border-b-0 hover:bg-white/[0.02] transition-colors">
             <span :class="i === 0 ? 'bg-accent' : 'border-2 border-ink-muted'" class="w-3 h-3 rounded-full shrink-0"></span>
             <span class="font-mono text-sm text-ink-muted w-44">{{ job.period }}</span>
-            <span class="w-full sm:w-72 text-xl sm:text-2xl font-semibold">{{ job.company }}</span>
+            <span class="w-full lg:w-80 text-xl sm:text-2xl font-semibold">{{ job.company }}</span>
             <span class="flex-1">
               <span class="block text-ink-soft">{{ job.role }}</span>
               <span class="block font-mono text-xs text-ink-muted mt-1">{{ job.location }}</span>
@@ -95,7 +95,7 @@
         <div class="rounded-2xl border border-ink-border bg-ink-900 p-8 sm:p-14 flex flex-wrap items-end justify-between gap-8">
           <div class="flex-[1_1_420px]">
             <h2 class="text-4xl sm:text-6xl font-bold leading-none tracking-tight mb-4">Let’s build something.</h2>
-            <p class="text-ink-soft text-lg leading-relaxed max-w-xl">Want to build something together? I’m always up for new challenges. Send a direct question by email or DM and I’ll reply when I can. No soliciting, please.</p>
+            <p class="text-ink-soft text-lg leading-relaxed max-w-xl">Want to work together? I’m always up for new challenges. Send a direct question by email or DM and I’ll reply when I can. No soliciting, please.</p>
           </div>
           <div class="flex flex-wrap gap-3">
           <a href="mailto:abrardw2@gmail.com"
@@ -120,7 +120,7 @@
     <footer class="border-t border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-ink-muted">
         <p>&copy; {{ new Date().getFullYear() }} Abrar Dhalwala</p>
-        <p>exit 0 — built with Vue + Tailwind</p>
+        <p>exit 0 — built with Vue + Vite + Tailwind</p>
       </div>
     </footer>
   </div>
@@ -142,7 +142,7 @@ const experience = [
   { company: 'MyWhoosh', role: 'Senior Software Engineer', location: 'Abu Dhabi, UAE', period: 'Aug 2022 → now' },
   { company: 'Bacancy Technology', role: 'Senior Software Engineer', location: 'Remote', period: 'Jan 2022 → Jul 2022' },
   { company: 'Aecor Digital', role: 'Senior Software Engineer', location: 'Vadodara, India', period: 'Mar 2020 → Dec 2021' },
-  { company: 'Netweb Software', role: 'Software Engineer', location: 'Vadodara, India', period: 'Feb 2017 → Mar 2020' },
+  { company: 'Netweb Software Pvt Ltd', role: 'Software Engineer', location: 'Vadodara, India', period: 'Feb 2017 → Mar 2020' },
   { company: 'Pixel Perfection', role: 'Software Engineer', location: 'Vadodara, India', period: 'Aug 2015 → Aug 2016' },
 ]
 
@@ -152,15 +152,15 @@ const skillCategories = [
   { key: 'data', items: ['MySQL', 'MongoDB', 'Redis'] },
   { key: 'realtime', items: ['WebSocket', 'RabbitMQ'] },
   { key: 'cloud', items: ['AWS S3', 'AWS Lambda', 'AWS EC2', 'Vercel'] },
-  { key: 'quality', items: ['Jest', 'SonarQube', 'Jira', 'GitHub', 'GitLab'] },
+  { key: 'tools', items: ['Jest', 'SonarQube', 'Jira', 'GitHub', 'GitLab'] },
 ]
 
 // Pads keys so the arrays in stack.json line up
 const keyWidth = Math.max(...skillCategories.map(c => c.key.length)) + 1
 
 const aboutPoints = [
-  'Full-stack apps, from backend services to interactive front-ends.',
+  'Full-stack apps, from backend services to interactive frontends.',
   'Close collaboration with clients and teams to build solutions that stay intuitive and maintainable.',
-  'Diploma in Computer Engineering, M S University, Vadodara (2010–2014).',
+  'Diploma in Computer Engineering, M.S. University, Vadodara (2010–2014).',
 ]
 </script>
