@@ -120,7 +120,7 @@
     <footer class="border-t border-ink-line">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-ink-muted">
         <p>&copy; {{ new Date().getFullYear() }} Abrar Dhalwala</p>
-        <p>exit 0 — built with Vue + Vite + Tailwind</p>
+        <p class="text-center">exit 0 — built with Vue + Vite + Tailwind and <a href="https://claude.com/claude-code" target="_blank" rel="noopener" class="text-ink-soft hover:text-accent transition-colors">Claude Code</a></p>
       </div>
     </footer>
   </div>
