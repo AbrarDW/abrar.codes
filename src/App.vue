@@ -25,8 +25,8 @@
     <main class="max-w-6xl mx-auto px-4 sm:px-6">
       <!-- Hero -->
       <section class="pt-36 sm:pt-44 pb-24">
-        <p class="font-mono text-ink-muted mb-5"><span class="text-accent">$</span> whoami</p>
-        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] sm:leading-none tracking-tighter">Abrar Dhalwala</h1>
+        <p class="font-mono text-ink-muted mb-5"><span class="text-accent">$</span> <span v-scramble.load>whoami</span></p>
+        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-bold leading-[0.95] sm:leading-none tracking-tighter" v-scramble.load>Abrar Dhalwala</h1>
         <p class="mt-7 text-xl sm:text-2xl text-ink-soft leading-snug sm:leading-8 max-w-3xl">
           Senior software engineer. 10+ years shipping full-stack web apps with Node, PHP, Python, Vue and TypeScript — fast, secure and easy to use.
         </p>
@@ -44,7 +44,7 @@
 
       <!-- Experience -->
       <section id="experience" class="py-16 scroll-mt-20">
-        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> git log --career --oneline</p>
+        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> <span v-scramble>git log --career --oneline</span></p>
         <ol class="rounded-xl border border-ink-border bg-ink-900 overflow-hidden">
           <li v-for="(job, i) in experience" :key="job.company"
               class="flex flex-wrap items-center gap-x-6 gap-y-2 px-5 sm:px-7 py-6 border-b border-ink-line last:border-b-0 hover:bg-white/2 transition-colors">
@@ -63,7 +63,7 @@
 
       <!-- Skills -->
       <section id="skills" class="py-16 scroll-mt-20">
-        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> cat stack.json</p>
+        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> <span v-scramble>cat stack.json</span></p>
         <pre class="p-6 sm:p-8 rounded-xl border border-ink-border bg-ink-900 font-mono text-sm sm:text-[15px] leading-loose text-ink-soft overflow-x-auto">{<template v-for="(category, i) in skillCategories" :key="category.key">
   <span class="text-syntax-key">"{{ category.key }}"</span>:{{ ' '.repeat(keyWidth - category.key.length) }}[<template v-for="(skill, j) in category.items" :key="skill"><span class="text-syntax-string">"{{ skill }}"</span><template v-if="j < category.items.length - 1">, </template></template>]<template v-if="i < skillCategories.length - 1">,</template></template>
 }</pre>
@@ -71,7 +71,7 @@
 
       <!-- About -->
       <section id="about" class="py-16 scroll-mt-20">
-        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> cat about.md</p>
+        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> <span v-scramble>cat about.md</span></p>
         <div class="grid lg:grid-cols-5 gap-10">
           <div class="lg:col-span-3 space-y-6">
             <p class="text-2xl sm:text-3xl leading-snug sm:leading-9 tracking-tight">
@@ -91,10 +91,10 @@
 
       <!-- Contact -->
       <section id="contact" class="py-16 pb-24 scroll-mt-20">
-        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> ping abrar</p>
+        <p class="font-mono text-ink-muted mb-8"><span class="text-accent">$</span> <span v-scramble>ping abrar</span></p>
         <div class="rounded-2xl border border-ink-border bg-ink-900 p-8 sm:p-14 flex flex-wrap items-end justify-between gap-8">
           <div class="flex-[1_1_420px]">
-            <h2 class="text-4xl sm:text-6xl font-bold leading-none tracking-tight mb-4">Let’s build something.</h2>
+            <h2 class="text-4xl sm:text-6xl font-bold leading-none tracking-tight mb-4" v-scramble>Let’s build something.</h2>
             <p class="text-ink-soft text-lg leading-relaxed max-w-xl">Want to work together? I’m always up for new challenges. Send a direct question by email or DM and I’ll reply when I can. No soliciting, please.</p>
           </div>
           <div class="flex flex-wrap gap-3">
@@ -128,6 +128,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { vScramble } from './effects'
 
 const menuOpen = ref(false)
 const menuButton = ref(null)

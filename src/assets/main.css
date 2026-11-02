@@ -70,3 +70,10 @@ body {
   html { scroll-behavior: auto; }
   .cursor-blink { animation: none; }
 }
+
+/* ASCII portrait reveal: freshly drawn characters fade from the accent to the text colour */
+.ascii-l0 { color: var(--color-accent); }
+.ascii-l1 { color: color-mix(in srgb, var(--color-accent) 80%, var(--color-ink-soft)); }
+.ascii-l2 { color: color-mix(in srgb, var(--color-accent) 60%, var(--color-ink-soft)); }
+.ascii-l3 { color: color-mix(in srgb, var(--color-accent) 40%, var(--color-ink-soft)); }
+.ascii-l4 { color: color-mix(in srgb, var(--color-accent) 20%, var(--color-ink-soft)); }
